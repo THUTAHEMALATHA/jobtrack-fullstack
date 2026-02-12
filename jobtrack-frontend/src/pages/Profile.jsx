@@ -6,7 +6,7 @@ function Profile() {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    axios.get("https://jobtrack-backend-wbvf.onrender.com/api/auth/profile", {
+    axios.get("https://thutahemalatha-jobtrack-fullstack.onrender.com/api/auth/profile", {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then(res => setUser(res.data));

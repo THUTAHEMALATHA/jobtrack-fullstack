@@ -13,7 +13,7 @@ function Dashboard() {
 
   const fetchApplications = async () => {
     const res = await axios.get(
-      "https://jobtrack-backend-wbvf.onrender.com/api/applications",
+      "https://thutahemalatha-jobtrack-fullstack.onrender.com",
       { headers: { Authorization: `Bearer ${token}` } }
     );
     setApplications(res.data);
@@ -23,7 +23,7 @@ function Dashboard() {
     if (!company || !role) return;
 
     await axios.post(
-      "https://jobtrack-backend-wbvf.onrender.com/api/applications",
+      "https://thutahemalatha-jobtrack-fullstack.onrender.com",
       { company, role, status: "Applied" },
       { headers: { Authorization: `Bearer ${token}` } }
     );
@@ -142,7 +142,7 @@ function Dashboard() {
                       value={app.status}
                       onChange={async (e) => {
                         await axios.patch(
-                          `https://jobtrack-backend-wbvf.onrender.com/api/applications/${app.id}`,
+                          `https://thutahemalatha-jobtrack-fullstack.onrender.com${app.id}`,
                           { status: e.target.value },
                           { headers: { Authorization: `Bearer ${token}` } }
                         );
@@ -159,7 +159,7 @@ function Dashboard() {
                     <button
                       onClick={async () => {
                         await axios.delete(
-                          `https://jobtrack-backend-wbvf.onrender.com/api/applications/${app.id}`,
+                          `https://thutahemalatha-jobtrack-fullstack.onrender.com${app.id}`,
                           { headers: { Authorization: `Bearer ${token}` } }
                         );
                         fetchApplications();
