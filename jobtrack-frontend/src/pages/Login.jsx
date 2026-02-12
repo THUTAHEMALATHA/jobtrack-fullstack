@@ -10,9 +10,10 @@ function Login() {
   const handleLogin = async () => {
     try {
       const res = await axios.post(
-        "https://thutahemalatha-jobtrack-fullstack.onrender.com/api/auth/login",
-        { email, password }
-      );
+  "https://thutahemalatha-jobtrack-fullstack.onrender.com/api/auth/login",
+  { email, password }
+);
+
       localStorage.setItem("token", res.data.token);
       navigate("/dashboard");
     } catch {
