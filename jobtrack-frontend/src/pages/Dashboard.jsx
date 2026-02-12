@@ -61,7 +61,7 @@ function Dashboard() {
             </p>
           </div>
 
-          {/* Add Application Card */}
+          {/* Add Application Card   */}
           <div className="bg-white p-6 rounded-2xl shadow-md mb-10">
             <div className="flex flex-col md:flex-row gap-4">
               <input
